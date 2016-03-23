@@ -22,7 +22,7 @@ export default function Mythbuster({
       onClick={handleInteraction}
     >
       <div className="mythbuster__header">
-        <img className="mythbuster__header-image" src="/assets/election-brand.svg" />
+        <object className="mythbuster__header-image" data={`${ items[defaultSlide].header }`} type="image/svg+xml" />
       </div>
       <div className="gallery">
         <Slides images={items} activeSlide={defaultSlide} />
@@ -35,12 +35,15 @@ if (process.env.NODE_ENV !== 'production') {
   Mythbuster.propTypes = {
     items: React.PropTypes.arrayOf(
       React.PropTypes.shape({
+        header: React.PropTypes.string,
+        id: React.PropTypes.string,
         sources: React.PropTypes.arrayOf(
           React.PropTypes.shape({
             url: React.PropTypes.string,
             width: React.PropTypes.number,
             height: React.PropTypes.number,
             dppx: React.PropTypes.number,
+            mime: React.PropTypes.string,
           })
         ),
         alt: React.PropTypes.string,

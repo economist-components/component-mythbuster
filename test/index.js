@@ -16,12 +16,9 @@ describe('Mythbuster', () => {
         sources: [
           {
             url: '/assets/slide.svg',
-            width: 297,
-            height: 297,
-            dppx: 1,
+            mime: 'image/svg+xml',
           },
         ],
-        alt: 'Mythbusting outta here',
       },
     ];
     const defaultSlide = 0;
