@@ -1,0 +1,63 @@
+.mythbuster {
+  overflow: hidden;
+  position: relative;
+  width: 297px;
+  height: 297px;
+}
+
+.mythbuster__header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 297px;
+  height: 72px;
+  z-index: 2;
+}
+
+.mythbuster__header-image {
+  float: right;
+}
+
+.mythbuster .gallery {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 297px;
+  height: 297px;
+  z-index: 1;
+}
+
+.mythbuster .gallery__slides {
+  position: relative;
+}
+
+.mythbuster .gallery__slide {
+  width: 297px;
+  height: 297px;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: 0.75s;
+  transition: 0.75s;
+}
+
+.mythbuster .gallery__slide--hidden {
+  display: none;
+}
+
+.mythbuster .gallery__slide--visible {
+  display: block;
+}
+
+.mythbuster .gallery__image {
+  margin: 0;
+  padding: 0;
+}
+
+.mythbuster--active .gallery__slide {
+  -webkit-transform: translateY(-297px);
+          transform: translateY(-297px);
+}
+
+.mythbuster {
+  margin: 0 auto;
+}
