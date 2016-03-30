@@ -7,7 +7,7 @@ import { mount } from 'enzyme';
 chai.use(chaiEnzyme()).should();
 
 describe('Mythbuster', () => {
-  const images = [
+  const items = [
     {
       sources: [
         {
@@ -26,7 +26,7 @@ describe('Mythbuster', () => {
     let rendered = null;
     let mythbuster = null;
     beforeEach(() => {
-      rendered = mount(<Mythbuster images={images} defaultSlide={defaultSlide} />);
+      rendered = mount(<Mythbuster items={items} defaultSlide={defaultSlide} />);
       mythbuster = rendered.find('.mythbuster');
     });
     it('toggles the active class', () => {
@@ -41,7 +41,7 @@ describe('Mythbuster', () => {
     let rendered = null;
     let mythbuster = null;
     beforeEach(() => {
-      rendered = mount(<Mythbuster images={images} defaultSlide={defaultSlide} />);
+      rendered = mount(<Mythbuster items={items} defaultSlide={defaultSlide} />);
       mythbuster = rendered.find('.mythbuster');
     });
 

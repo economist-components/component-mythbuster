@@ -1,6 +1,5 @@
 import React from 'react';
 import Slides from '@economist/component-gallery/lib/slides';
-import content from './content';
 
 export function handleInteraction(event) {
   if (!event && !event.currentTarget) {
@@ -12,7 +11,7 @@ export function handleInteraction(event) {
 
 export default function Mythbuster({
   defaultSlide = 0,
-  items = content,
+  items = [],
 }) {
   return (
     <div
