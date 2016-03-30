@@ -1,0 +1,61 @@
+:root {
+  --mythbuster__width: 297px;
+  --mythbuster__height: 297px;
+}
+
+.mythbuster {
+  overflow: hidden;
+  position: relative;
+  width: var(--mythbuster__width);
+  height: var(--mythbuster__height);
+}
+
+.mythbuster__header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--mythbuster__width);
+  height: 72px;
+  z-index: 2;
+}
+
+.mythbuster__header-image {
+  float: right;
+}
+
+.mythbuster .gallery {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--mythbuster__width);
+  height: var(--mythbuster__height);
+  z-index: 1;
+}
+
+.mythbuster .gallery__slides {
+  position: relative;
+}
+
+.mythbuster .gallery__slide {
+  width: var(--mythbuster__width);
+  height: var(--mythbuster__height);
+  transform: translateY(0);
+  transition: 0.75s;
+}
+
+.mythbuster .gallery__slide--hidden {
+  display: none;
+}
+
+.mythbuster .gallery__slide--visible {
+  display: block;
+}
+
+.mythbuster .gallery__image {
+  margin: 0;
+  padding: 0;
+}
+
+.mythbuster--active .gallery__slide {
+  transform: translateY(-var(--mythbuster__height));
+}
