@@ -111,7 +111,7 @@
     "@economist/component-gallery": "^5.1.0",
     "@economist/component-picture": "^1.2.0",
     "react": "^0.14.7",
-    "react-dom": "^0.14.7"
+    "react-dom": "^15.0.2"
   },
   "devDependencies": {
     "@economist/doc-pack": "^1.0.6",
